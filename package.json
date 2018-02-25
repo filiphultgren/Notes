@@ -1,0 +1,17 @@
+{
+  "name": "Notes-app",
+  "version": "0.0.1",
+  "description": "Sharable notes",
+  "main": "notes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filip Hultgren",
+  "license": "",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "socket.io": "^2.0.4"
+  }
+}
