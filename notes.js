@@ -1,12 +1,21 @@
-var app = require('express')();
+'use strict';
+
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
-var React = require('react');
+var io = require('socket.io')(http);
+var path = require('path');
 
 var port = 3000;
 app.set('port', (process.env.PORT || port));
 
+// Serve static assets from public/
+app.use(express.static(path.join(__dirname, 'public/')));
+// Serve vue from node_modules as vue/
+app.use('/vue', express.static(path.join(__dirname, '/node_modules/vue/dist/')));
+
 app.get('/', function(req, res){
-  res.send('<h1>Hello world</h1>');
+  res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
 http.listen(3000, function(){

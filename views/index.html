@@ -1,9 +1,34 @@
 <!doctype HTML>
 <html>
     <head>
-
+        <title>Shareable Notes</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/logIn.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
+        <script src="https://vuejs.org/js/vue.js" defer></script>
+        <script src="/socket.io/socket.io.js" defer></script>
+        <script src="/vue/vue.js" defer></script>
+        <script src="js/vue_customer.js" defer></script>
     </head>
     <body>
-        
+        <img src="img/coffee.jpg" class="img">
+        <div id="header">
+            <h1 id="title">
+                L&F
+            </h1>
+        </div>
+        <div id="pin">
+            <h1 id="anteck">
+                Anteckningar
+            </h1>
+            <form id="pinForm">
+                <p>
+                    <input type="text" class="pinInput" id="pinInput" name="fn" required="required" placeholder="Enter PIN">
+                </p>
+            </form>
+            <button class="pinInput" id="pinEnter">
+                Enter
+            </button>
+        </div>
     </body>
 </html>
